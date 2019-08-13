@@ -1,0 +1,6 @@
+<div>
+  <h1>Parent Component:</h1>
+  <p>Available amount {{parentAmount}}</p>
+  <button (click)="deposit()">Deposit $100</button>
+  <child-component [childAmount]="parentAmount"></child-component>
+</div>

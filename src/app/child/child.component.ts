@@ -1,4 +1,6 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+
+
 
 @Component({
   selector: 'child-component',
@@ -8,10 +10,13 @@ import { Component, Input} from '@angular/core';
 export class ChildComponent{
 
   @Input() childAmount: number;
+  // @Output()  childAmountChange: EventEmitter = new EventEmitter();  // Why can I not decare a type ?
+  @Output()  childAmountChange = new EventEmitter(); 
   constructor() { }
 
   withdraw(): void {
     this.childAmount -= 100;
+    this.childAmountChange.emit(this.childAmount);
   }
 
 }

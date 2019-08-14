@@ -1,6 +1,6 @@
 # DataBinding
 
-## References:
+## References
 
 - [Custom two way binding](https://medium.com/@preethi.s/angular-custom-two-way-data-binding-3e618309d6c7)
 

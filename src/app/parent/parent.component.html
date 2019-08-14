@@ -2,5 +2,16 @@
   <h1>Parent Component:</h1>
   <p>Available amount {{parentAmount}}</p>
   <button (click)="deposit()">Deposit $100</button>
-  <child-component [childAmount]="parentAmount" (childAmountChange)="parentAmount=$event"></child-component> <!-- Access the event object with the $event argument passed to the output event handler:-->
+  <child-component [(childAmount)]="parentAmount"></child-component> <!-- banana in the box 2 way binding -->
+  <!-- <child-component [childAmount]="parentAmount" (childAmountChange)="parentAmount=$event"></child-component> Access the event object with the $event argument passed to the output event handler: -->
+  
+  <br>
+  <h3>A downside of [()], two way binding</h3>
+  <p>When we want to do something extra in theChildComponent when amount 
+      property gets updated , we could do the extra processing in angular 
+      life-cycle hook called ngOnChanges. But we could not do the same in
+      ParentComponent because ngOnChanges is triggered only when @Input() 
+      is changed (parent to child). In that case, we would want to split 
+      the banana-in-a-box back to the property and event binding syntax 
+      and do the extra processing in ParentComponent's event listener method.</p>
 </div>

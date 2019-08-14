@@ -1,12 +1,8 @@
 # DataBinding
 
-<hr>
-
-
 ## References:
-- [Custom two way binding](https://medium.com/@preethi.s/angular-custom-two-way-data-binding-3e618309d6c7)
 
-<hr>
+- [Custom two way binding](https://medium.com/@preethi.s/angular-custom-two-way-data-binding-3e618309d6c7)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
